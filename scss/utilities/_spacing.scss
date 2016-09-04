@@ -9,28 +9,75 @@
   margin-left:  auto !important;
 }
 
-@each $prop, $abbrev in (margin: m, padding: p) {
-  @each $size, $lengths in $spacers {
-    $length-x:   map-get($lengths, x);
-    $length-y:   map-get($lengths, y);
+@mixin spacing($prop, $abbrev, $size, $length-x, $length-y) {
+  .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
+  .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
+  .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
+  .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
+  .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
 
-    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
-    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
-    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
-    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
-    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
-
-    // Axes
-    .#{$abbrev}-x-#{$size} {
-      #{$prop}-right:  $length-x !important;
-      #{$prop}-left:   $length-x !important;
-    }
-    .#{$abbrev}-y-#{$size} {
-      #{$prop}-top:    $length-y !important;
-      #{$prop}-bottom: $length-y !important;
-    }
+  // Axes
+  .#{$abbrev}-x-#{$size} {
+    #{$prop}-right:  $length-x !important;
+    #{$prop}-left:   $length-x !important;
+  }
+  .#{$abbrev}-y-#{$size} {
+    #{$prop}-top:    $length-y !important;
+    #{$prop}-bottom: $length-y !important;
   }
 }
+
+@include spacing(m, xs, 0, $spacers-x-0, $spacers-y-0);
+@include spacing(p, xs, 0, $spacers-x-0, $spacers-y-0);
+
+@include spacing(m, sm, 0, $spacers-x-0, $spacers-y-0);
+@include spacing(p, sm, 0, $spacers-x-0, $spacers-y-0);
+
+@include spacing(m, md, 0, $spacers-x-0, $spacers-y-0);
+@include spacing(p, md, 0, $spacers-x-0, $spacers-y-0);
+
+@include spacing(m, xl, 0, $spacers-x-0, $spacers-y-0);
+@include spacing(p, xl, 0, $spacers-x-0, $spacers-y-0);
+
+
+@include spacing(m, xs, 1, $spacers-x-1, $spacers-y-1);
+@include spacing(p, xs, 1, $spacers-x-1, $spacers-y-1);
+
+@include spacing(m, sm, 1, $spacers-x-1, $spacers-y-1);
+@include spacing(p, sm, 1, $spacers-x-1, $spacers-y-1);
+
+@include spacing(m, md, 1, $spacers-x-1, $spacers-y-1);
+@include spacing(p, md, 1, $spacers-x-1, $spacers-y-1);
+
+@include spacing(m, xl, 1, $spacers-x-1, $spacers-y-1);
+@include spacing(p, xl, 1, $spacers-x-1, $spacers-y-1);
+
+
+@include spacing(m, xs, 2, $spacers-x-2, $spacers-y-2);
+@include spacing(p, xs, 2, $spacers-x-2, $spacers-y-2);
+
+@include spacing(m, sm, 2, $spacers-x-2, $spacers-y-2);
+@include spacing(p, sm, 2, $spacers-x-2, $spacers-y-2);
+
+@include spacing(m, md, 2, $spacers-x-2, $spacers-y-2);
+@include spacing(p, md, 2, $spacers-x-2, $spacers-y-2);
+
+@include spacing(m, xl, 2, $spacers-x-2, $spacers-y-2);
+@include spacing(p, xl, 2, $spacers-x-2, $spacers-y-2);
+
+
+@include spacing(m, xs, 3, $spacers-x-3, $spacers-y-3);
+@include spacing(p, xs, 3, $spacers-x-3, $spacers-y-3);
+
+@include spacing(m, sm, 3, $spacers-x-3, $spacers-y-3);
+@include spacing(p, sm, 3, $spacers-x-3, $spacers-y-3);
+
+@include spacing(m, md, 3, $spacers-x-3, $spacers-y-3);
+@include spacing(p, md, 3, $spacers-x-3, $spacers-y-3);
+
+@include spacing(m, xl, 3, $spacers-x-3, $spacers-y-3);
+@include spacing(p, xl, 3, $spacers-x-3, $spacers-y-3);
+
 
 // Positioning
 

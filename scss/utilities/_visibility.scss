@@ -10,19 +10,65 @@
 
 // Responsive visibility utilities
 
-@each $bp in map-keys($grid-breakpoints) {
-  .hidden-#{$bp}-up {
-    @include media-breakpoint-up($bp) {
-      display: none !important;
-    }
+$bp: xs;
+.hidden-#{$bp}-up {
+  @include media-breakpoint-up($bp) {
+    display: none !important;
   }
-  .hidden-#{$bp}-down {
-    @include media-breakpoint-down($bp) {
-      display: none !important;
-    }
+}
+.hidden-#{$bp}-down {
+  @include media-breakpoint-down($bp) {
+    display: none !important;
   }
 }
 
+$bp: sm;
+.hidden-#{$bp}-up {
+  @include media-breakpoint-up($bp) {
+    display: none !important;
+  }
+}
+.hidden-#{$bp}-down {
+  @include media-breakpoint-down($bp) {
+    display: none !important;
+  }
+}
+
+$bp: md;
+.hidden-#{$bp}-up {
+  @include media-breakpoint-up($bp) {
+    display: none !important;
+  }
+}
+.hidden-#{$bp}-down {
+  @include media-breakpoint-down($bp) {
+    display: none !important;
+  }
+}
+
+$bp: lg;
+.hidden-#{$bp}-up {
+  @include media-breakpoint-up($bp) {
+    display: none !important;
+  }
+}
+.hidden-#{$bp}-down {
+  @include media-breakpoint-down($bp) {
+    display: none !important;
+  }
+}
+
+$bp: xs;
+.hidden-#{$bp}-up {
+  @include media-breakpoint-up($bp) {
+    display: none !important;
+  }
+}
+.hidden-#{$bp}-down {
+  @include media-breakpoint-down($bp) {
+    display: none !important;
+  }
+}
 
 // Print utilities
 //

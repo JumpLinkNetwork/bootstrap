@@ -20,17 +20,18 @@
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-    $prev-key: $key;
-    $prev-num: $num;
-  }
+  // TODO
+  // @each $key, $num in $map {
+  //   @if $prev-num == null {
+  //     // Do nothing
+  //   } @else if not comparable($prev-num, $num) {
+  //     @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  //   } @else if $prev-num >= $num {
+  //     @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  //   }
+  //   $prev-key: $key;
+  //   $prev-num: $num;
+  // }
 }
 
 // General variable structure
@@ -79,24 +80,16 @@ $enable-print-styles:       true !default;
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
-$spacers: (
-  0: (
-    x: 0,
-    y: 0
-  ),
-  1: (
-    x: $spacer-x,
-    y: $spacer-y
-  ),
-  2: (
-    x: ($spacer-x * 1.5),
-    y: ($spacer-y * 1.5)
-  ),
-  3: (
-    x: ($spacer-x * 3),
-    y: ($spacer-y * 3)
-  )
-) !default;
+
+$spacers-x-0: 0 !default;
+$spacers-y-0: 0 !default;
+$spacers-x-1: $spacer-x !default;
+$spacers-y-1: $spacer-y !default;
+$spacers-x-2: ($spacer-x * 1.5) !default;
+$spacers-y-2: ($spacer-y * 1.5) !default;
+$spacers-x-3: ($spacer-x * 3) !default;
+$spacers-y-3: ($spacer-y * 3) !default;
+
 $border-width: 1px !default;
 
 
@@ -123,27 +116,26 @@ $link-hover-decoration: underline !default;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 544px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+$grid-breakpoints-xs: 0 !default;
+$grid-breakpoints-sm: 544px !default;
+$grid-breakpoints-md: 768px !default;
+$grid-breakpoints-lg: 992px !default;
+$grid-breakpoints-xl: 1200px !default;
+
+// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
 
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 576px,
-  md: 720px,
-  lg: 940px,
-  xl: 1140px
-) !default;
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+$container-max-widths-xs: 576px !default;
+$container-max-widths-sm: 576px !default;
+$container-max-widths-md: 720px !default;
+$container-max-widths-lg: 940px !default;
+$container-max-widths-xl: 1140px !default;
+
+// @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
 // Grid columns
@@ -417,14 +409,9 @@ $custom-file-border-radius: $border-radius !default;
 $custom-file-box-shadow:    inset 0 .2rem .4rem rgba(0,0,0,.05) !default;
 $custom-file-button-color:  $custom-file-color !default;
 $custom-file-button-bg:     #eee !default;
-$custom-file-text: (
-  placeholder: (
-    en: "Choose file..."
-  ),
-  button-label: (
-    en: "Browse"
-  )
-) !default;
+
+$custom-file-text-placeholder-en: "Choose file..." !default;
+$custom-file-text-button-label-en: "Browse" !default;
 
 
 // Form validation icons

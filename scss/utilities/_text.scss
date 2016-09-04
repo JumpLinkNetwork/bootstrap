@@ -10,13 +10,42 @@
 
 // Responsive alignment
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    .text-#{$breakpoint}-left   { text-align: left !important; }
-    .text-#{$breakpoint}-right  { text-align: right !important; }
-    .text-#{$breakpoint}-center { text-align: center !important; }
-  }
+$breakpoint: xs;
+@include media-breakpoint-up($breakpoint) {
+  .text-#{$breakpoint}-left   { text-align: left !important; }
+  .text-#{$breakpoint}-right  { text-align: right !important; }
+  .text-#{$breakpoint}-center { text-align: center !important; }
 }
+
+$breakpoint: sm;
+@include media-breakpoint-up($breakpoint) {
+  .text-#{$breakpoint}-left   { text-align: left !important; }
+  .text-#{$breakpoint}-right  { text-align: right !important; }
+  .text-#{$breakpoint}-center { text-align: center !important; }
+}
+
+$breakpoint: md;
+@include media-breakpoint-up($breakpoint) {
+  .text-#{$breakpoint}-left   { text-align: left !important; }
+  .text-#{$breakpoint}-right  { text-align: right !important; }
+  .text-#{$breakpoint}-center { text-align: center !important; }
+}
+
+$breakpoint: lg;
+@include media-breakpoint-up($breakpoint) {
+  .text-#{$breakpoint}-left   { text-align: left !important; }
+  .text-#{$breakpoint}-right  { text-align: right !important; }
+  .text-#{$breakpoint}-center { text-align: center !important; }
+}
+
+$breakpoint: xl;
+@include media-breakpoint-up($breakpoint) {
+  .text-#{$breakpoint}-left   { text-align: left !important; }
+  .text-#{$breakpoint}-right  { text-align: right !important; }
+  .text-#{$breakpoint}-center { text-align: center !important; }
+}
+
+
 
 // Transformation
 
