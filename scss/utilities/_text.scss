@@ -9,14 +9,19 @@
 .text-truncate       { @include text-truncate; }
 
 // Responsive alignment
-
-@each $breakpoint in map-keys($grid-breakpoints) {
+@mixin responsive-text-alignment($breakpoint) {
   @include media-breakpoint-up($breakpoint) {
     .text-#{$breakpoint}-left   { text-align: left !important; }
     .text-#{$breakpoint}-right  { text-align: right !important; }
     .text-#{$breakpoint}-center { text-align: center !important; }
   }
 }
+
+@include responsive-text-alignment(xs);
+@include responsive-text-alignment(sm);
+@include responsive-text-alignment(md);
+@include responsive-text-alignment(lg);
+@include responsive-text-alignment(xl);
 
 // Transformation
 

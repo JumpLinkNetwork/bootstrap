@@ -17,19 +17,70 @@
 // Fonts
 // Components
 
-@mixin _assert-ascending($map, $map-name) {
+@mixin _assert-ascending($xs, $sm, $md, $lg, $xl) {
   $prev-key: null;
   $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-    $prev-key: $key;
-    $prev-num: $num;
+  $key: 'xs';
+  $map-name: 'xs';
+  $num: $xs;
+  @if $prev-num == null {
+    // Do nothing
+  } @else if not comparable($prev-num, $num) {
+    @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  } @else if $prev-num >= $num {
+    @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  }
+
+  $prev-key: $key;
+  $prev-num: $num;
+  $key: 'sm';
+  $map-name: 'sm';
+  $num: $sm;
+  @if $prev-num == null {
+    // Do nothing
+  } @else if not comparable($prev-num, $num) {
+    @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  } @else if $prev-num >= $num {
+    @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  }
+
+  $prev-key: $key;
+  $prev-num: $num;
+  $key: 'md';
+  $map-name: 'md';
+  $num: $md;
+  @if $prev-num == null {
+    // Do nothing
+  } @else if not comparable($prev-num, $num) {
+    @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  } @else if $prev-num >= $num {
+    @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  }
+
+  $prev-key: $key;
+  $prev-num: $num;
+  $key: 'lg';
+  $map-name: 'lg';
+  $num: $lg;
+  @if $prev-num == null {
+    // Do nothing
+  } @else if not comparable($prev-num, $num) {
+    @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  } @else if $prev-num >= $num {
+    @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  }
+
+  $prev-key: $key;
+  $prev-num: $num;
+  $key: 'xl';
+  $map-name: 'xl';
+  $num: $xl;
+  @if $prev-num == null {
+    // Do nothing
+  } @else if not comparable($prev-num, $num) {
+    @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+  } @else if $prev-num >= $num {
+    @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
   }
 }
 
@@ -79,24 +130,16 @@ $enable-print-styles:       true !default;
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
-$spacers: (
-  0: (
-    x: 0,
-    y: 0
-  ),
-  1: (
-    x: $spacer-x,
-    y: $spacer-y
-  ),
-  2: (
-    x: ($spacer-x * 1.5),
-    y: ($spacer-y * 1.5)
-  ),
-  3: (
-    x: ($spacer-x * 3),
-    y: ($spacer-y * 3)
-  )
-) !default;
+
+$spacers-x-0: 0 !default;
+$spacers-y-0: 0 !default;
+$spacers-x-1: $spacer-x !default;
+$spacers-y-1: $spacer-y !default;
+$spacers-x-2: ($spacer-x * 1.5) !default;
+$spacers-y-2: ($spacer-y * 1.5) !default;
+$spacers-x-3: ($spacer-x * 3) !default;
+$spacers-y-3: ($spacer-y * 3) !default;
+
 $border-width: 1px !default;
 
 
@@ -123,27 +166,26 @@ $link-hover-decoration: underline !default;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 544px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+$grid-breakpoints-xs: 0 !default;
+$grid-breakpoints-sm: 544px !default;
+$grid-breakpoints-md: 768px !default;
+$grid-breakpoints-lg: 992px !default;
+$grid-breakpoints-xl: 1200px !default;
+
+@include _assert-ascending($grid-breakpoints-xs, $grid-breakpoints-sm, $grid-breakpoints-md, $grid-breakpoints-lg, $grid-breakpoints-xl);
 
 
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 576px,
-  md: 720px,
-  lg: 940px,
-  xl: 1140px
-) !default;
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+$container-max-widths-xs: null !default;
+$container-max-widths-sm: 576px !default;
+$container-max-widths-md: 720px !default;
+$container-max-widths-lg: 940px !default;
+$container-max-widths-xl: 1140px !default;
+
+@include _assert-ascending($container-max-widths-xs, $container-max-widths-sm, $container-max-widths-md, $container-max-widths-lg, $container-max-widths-xl);
 
 
 // Grid columns

@@ -3,7 +3,54 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
-@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+@mixin make-grid-column($breakpoint, $breakpoint-counter, $columns: $grid-columns, $gutter: $grid-gutter-width, $xs: $grid-breakpoints-xs, $sm: $grid-breakpoints-sm, $md: $grid-breakpoints-md, $lg: $grid-breakpoints-lg, $xl: $grid-breakpoints-xl) {
+
+  @for $i from 1 through $columns {
+    .col-#{$breakpoint}-#{$i} {
+      @extend %grid-column;
+    }
+  }
+
+  @include media-breakpoint-up($breakpoint, $xs, $sm, $md, $lg, $xl) {
+    // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+    @if $enable-flex {
+      .col-#{$breakpoint} {
+        position: relative;
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        min-height: 1px;
+        padding-right: ($grid-gutter-width / 2);
+        padding-left:  ($grid-gutter-width / 2);
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$breakpoint}-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+
+    @each $modifier in (pull, push) {
+      @for $i from 0 through $columns {
+        .#{$modifier}-#{$breakpoint}-#{$i} {
+          @include make-col-modifier($modifier, $i, $columns)
+        }
+      }
+    }
+
+    // `$columns - 1` because offsetting by the width of an entire row isn't possible
+    @for $i from 0 through ($columns - 1) {
+      @if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .offset-xs-0
+        .offset-#{$breakpoint}-#{$i} {
+          @include make-col-modifier(offset, $i, $columns)
+        }
+      }
+    }
+  }
+}
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $xs: $grid-breakpoints-xs, $sm: $grid-breakpoints-sm, $md: $grid-breakpoints-md, $lg: $grid-breakpoints-lg, $xl: $grid-breakpoints-xl) {
 
   // Common properties for all breakpoints
   %grid-column {
@@ -20,51 +67,24 @@
   }
 
   $breakpoint-counter: 0;
-  @each $breakpoint in map-keys($breakpoints) {
-    $breakpoint-counter: ($breakpoint-counter + 1);
 
-    @for $i from 1 through $columns {
-      .col-#{$breakpoint}-#{$i} {
-        @extend %grid-column;
-      }
-    }
+  $breakpoint: xs;
+  $breakpoint-counter: ($breakpoint-counter + 1);
+  @include make-grid-column($breakpoint, $breakpoint-counter, $columns, $gutter, $xs, $sm, $md, $lg, $xl);
 
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      @if $enable-flex {
-        .col-#{$breakpoint} {
-          position: relative;
-          flex-basis: 0;
-          flex-grow: 1;
-          max-width: 100%;
-          min-height: 1px;
-          padding-right: ($grid-gutter-width / 2);
-          padding-left:  ($grid-gutter-width / 2);
-        }
-      }
+  $breakpoint: sm;
+  $breakpoint-counter: ($breakpoint-counter + 1);
+  @include make-grid-column($breakpoint, $breakpoint-counter, $columns, $gutter, $xs, $sm, $md, $lg, $xl);
 
-      @for $i from 1 through $columns {
-        .col-#{$breakpoint}-#{$i} {
-          @include make-col($i, $columns);
-        }
-      }
+  $breakpoint: md;
+  $breakpoint-counter: ($breakpoint-counter + 1);
+  @include make-grid-column($breakpoint, $breakpoint-counter, $columns, $gutter, $xs, $sm, $md, $lg, $xl);
 
-      @each $modifier in (pull, push) {
-        @for $i from 0 through $columns {
-          .#{$modifier}-#{$breakpoint}-#{$i} {
-            @include make-col-modifier($modifier, $i, $columns)
-          }
-        }
-      }
+  $breakpoint: lg;
+  $breakpoint-counter: ($breakpoint-counter + 1);
+  @include make-grid-column($breakpoint, $breakpoint-counter, $columns, $gutter, $xs, $sm, $md, $lg, $xl);
 
-      // `$columns - 1` because offsetting by the width of an entire row isn't possible
-      @for $i from 0 through ($columns - 1) {
-        @if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .offset-xs-0
-          .offset-#{$breakpoint}-#{$i} {
-            @include make-col-modifier(offset, $i, $columns)
-          }
-        }
-      }
-    }
-  }
+  $breakpoint: xl;
+  $breakpoint-counter: ($breakpoint-counter + 1);
+  @include make-grid-column($breakpoint, $breakpoint-counter, $columns, $gutter, $xs, $sm, $md, $lg, $xl);
 }

@@ -8,7 +8,7 @@
 
 // Responsive visibility utilities
 
-@each $bp in map-keys($grid-breakpoints) {
+@mixin responsive-visibility-utilities($bp) {
   .hidden-#{$bp}-up {
     @include media-breakpoint-up($bp) {
       display: none !important;
@@ -21,6 +21,11 @@
   }
 }
 
+@include responsive-visibility-utilities(xs);
+@include responsive-visibility-utilities(sm);
+@include responsive-visibility-utilities(md);
+@include responsive-visibility-utilities(lg);
+@include responsive-visibility-utilities(xl);
 
 // Print utilities
 //
