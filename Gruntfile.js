@@ -406,4 +406,42 @@ module.exports = function (grunt) {
 
   // Publish to GitHub
   grunt.registerTask('publish', ['buildcontrol:pages']);
+
+
+  grunt.registerTask('diff', function () {
+    console.log("diff");
+    var done = this.async();
+    var colors        = require('colors');
+    var jsdiff        = require('diff');
+    var fs            = require('fs');
+
+    fs.readFile('./dist/css/bootstrap.css', 'utf8', function(err, backward) {
+      if (err) throw err;
+      console.log(backward);
+      fs.readFile('./bower_components/bootstrap-4-original/dist/css/bootstrap.css', 'utf8', function(err, original) {
+        if (err) throw err;
+        console.log(original);
+        
+        var diff = jsdiff.diffCss(original, backward);
+
+        diff.forEach(function(part){
+          // green for additions, red for deletions
+          // grey for common parts
+          var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
+          if(part.added ||  part.removed) {
+            process.stderr.write(part.value[color]);
+          }
+          console.log();
+          done();
+          
+        });
+
+        
+      });
+    });
+
+
+  });
+
+
 };
