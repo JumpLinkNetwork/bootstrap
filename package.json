@@ -44,7 +44,10 @@
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-eslint": "^6.0.4",
+    "colors": "^1.1.2",
+    "diff": "^3.0.0",
     "eslint": "^3.0.0",
+    "glob": "^7.0.6",
     "grunt": "^1.0.1",
     "grunt-babel": "^5.0.3",
     "grunt-build-control": "^0.7.0",
