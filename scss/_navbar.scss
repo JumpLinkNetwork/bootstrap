@@ -214,43 +214,41 @@
 //
 // Custom override for collapse plugin in navbar.
 
-.navbar-toggleable {
-  &-xs {
-    @include clearfix;
-    @include media-breakpoint-down(xs) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
-    }
-    @include media-breakpoint-up(sm) {
-      display: block !important;
+.navbar-toggleable-xs {
+  @include clearfix;
+  @include media-breakpoint-down(xs) {
+    .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0;
     }
   }
+  @include media-breakpoint-up(sm) {
+    display: block !important;
+  }
+}
 
-  &-sm {
-    @include clearfix;
-    @include media-breakpoint-down(sm) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
-    }
-    @include media-breakpoint-up(md) {
-      display: block !important;
+.navbar-toggleable-sm {
+  @include clearfix;
+  @include media-breakpoint-down(sm) {
+    .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0;
     }
   }
+  @include media-breakpoint-up(md) {
+    display: block !important;
+  }
+}
 
-  &-md {
-    @include clearfix;
-    @include media-breakpoint-down(md) {
-      .navbar-nav .nav-item {
-        float: none;
-        margin-left: 0;
-      }
+.navbar-toggleable-md {
+  @include clearfix;
+  @include media-breakpoint-down(md) {
+    .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0;
     }
-    @include media-breakpoint-up(lg) {
-      display: block !important;
-    }
+  }
+  @include media-breakpoint-up(lg) {
+    display: block !important;
   }
 }
