@@ -235,10 +235,10 @@
   @include border-radius($custom-file-border-radius);
   @include box-shadow($custom-file-box-shadow);
 
-  @each $lang, $text in map-get($custom-file-text, placeholder) {
-    &:lang(#{$lang})::after {
-      content: $text;
-    }
+  $lang: en;
+  $text: $custom-file-text-placeholder-en;
+  &:lang(#{$lang})::after {
+    content: $text;
   }
 
   &::before {
@@ -257,9 +257,9 @@
     @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
   }
 
-  @each $lang, $text in map-get($custom-file-text, button-label) {
-    &:lang(#{$lang})::before {
-      content: $text;
-    }
+  $lang: en;
+  $text: $custom-file-text-button-label-en;
+  &:lang(#{$lang})::before {
+    content: $text;
   }
 }
