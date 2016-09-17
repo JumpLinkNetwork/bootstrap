@@ -5,6 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+// autorefix
+@import "./../bower_components/sass-autoprefixer/scss/prefixes";
+
 // Core variables and mixins
 @import "custom";
 @import "variables";
