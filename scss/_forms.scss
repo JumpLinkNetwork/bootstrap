@@ -16,7 +16,7 @@
   background-color: $input-bg;
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
-  background-clip: padding-box;
+  @include vp-background-clip(padding-box);
   border: $input-btn-border-width solid $input-border-color;
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @include border-radius($input-border-radius);
@@ -33,11 +33,7 @@
   @include form-control-focus();
 
   // Placeholder
-  &::placeholder {
-    color: $input-color-placeholder;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
-  }
+  @include vp-placeholder($input-color-placeholder, 1); // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
 
   // Disabled and read-only inputs
   //
@@ -258,7 +254,8 @@ select.form-control-lg {
   padding-right: ($input-padding-x * 3);
   background-repeat: no-repeat;
   background-position: center right ($input-height / 4);
-  background-size: ($input-height / 2) ($input-height / 2);
+  @include vp-background-size(($input-height / 2) ($input-height / 2));
+  
 }
 
 // Form validation states

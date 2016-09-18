@@ -2,11 +2,10 @@
 // Progress animations
 //
 
-@keyframes progress-bar-stripes {
+@include vp-keyframes(progress-bar-stripes) {
   from { background-position: $spacer-y 0; }
   to { background-position: 0 0; }
 }
-
 
 //
 // Basic progress bar
@@ -24,7 +23,7 @@
   // Remove Firefox and Opera border
   border: 0;
   // Reset the default appearance
-  appearance: none;
+  @include vp-appearance(none);
   // Set overall border radius
   @include border-radius($progress-border-radius);
 }
@@ -90,21 +89,21 @@ base::-moz-progress-bar, // Absurd-but-syntactically-valid selector to make thes
 
 .progress-striped[value]::-webkit-progress-value {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  @include vp-background-size($spacer-y $spacer-y);
 }
 .progress-striped[value]::-moz-progress-bar {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  @include vp-background-size($spacer-y $spacer-y);
 }
 .progress-striped[value]::-ms-fill {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  @include vp-background-size($spacer-y $spacer-y);
 }
 // IE9
 @media screen and (min-width:0\0) {
   .progress-bar-striped {
     @include gradient-striped();
-    background-size: $spacer-y $spacer-y;
+    @include vp-background-size($spacer-y $spacer-y);
   }
 }
 
@@ -114,15 +113,15 @@ base::-moz-progress-bar, // Absurd-but-syntactically-valid selector to make thes
 //
 
 .progress-animated[value]::-webkit-progress-value {
-  animation: progress-bar-stripes 2s linear infinite;
+  @include vp-animation(progress-bar-stripes 2s linear infinite);
 }
 .progress-animated[value]::-moz-progress-bar {
-  animation: progress-bar-stripes 2s linear infinite;
+  @include vp-animation(progress-bar-stripes 2s linear infinite);
 }
 // IE9
 @media screen and (min-width:0\0) {
   .progress-animated .progress-bar-striped {
-    animation: progress-bar-stripes 2s linear infinite;
+    @include vp-animation(progress-bar-stripes 2s linear infinite);
   }
 }
 

@@ -4,13 +4,13 @@
 
 @mixin box-shadow($shadow...) {
   @if $enable-shadows {
-    box-shadow: $shadow;
+    @include vp-box-sizing($shadow);
   }
 }
 
 @mixin transition($transition...) {
   @if $enable-transitions {
-    transition: $transition;
+    @include vp-box-sizing($transition);
   }
 }
 

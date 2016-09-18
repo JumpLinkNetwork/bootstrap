@@ -310,8 +310,8 @@
 
 @include media-breakpoint-up(sm) {
   .card-columns {
-    column-count: 3;
-    column-gap: $card-columns-sm-up-column-gap;
+    @include vp-column-count(3);
+    @include vp-column-gap($card-columns-sm-up-column-gap);
 
     .card {
       width: 100%; // Don't let them exceed the column width

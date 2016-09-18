@@ -25,10 +25,10 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    transition: transform .3s ease-out;
-    transform: translate(0, -25%);
+    @include vp-transition(transform .3s ease-out);
+    @include vp-transform(translate(0, -25%));
   }
-  &.in .modal-dialog { transform: translate(0, 0); }
+  &.in .modal-dialog {  @include vp-transform(translate(0, 0)); }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -46,7 +46,7 @@
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  background-clip: padding-box;
+  @include vp-background-clip(padding-box);
   border: $modal-content-border-width solid $modal-content-border-color;
   @include border-radius($border-radius-lg);
   @include box-shadow($modal-content-xs-box-shadow);

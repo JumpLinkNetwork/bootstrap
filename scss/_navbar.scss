@@ -51,7 +51,7 @@
 }
 
 .navbar-sticky-top {
-  position: sticky;
+  @include vp-position(sticky);
   top: 0;
   z-index: $zindex-navbar-sticky;
   width: 100%;

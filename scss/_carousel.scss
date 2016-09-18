@@ -11,7 +11,7 @@
   > .carousel-item {
     position: relative;
     display: none;
-    transition: .6s ease-in-out left;
+    @include vp-transition(.6s ease-in-out left);
 
     // Account for jankitude on images
     > img,
@@ -22,25 +22,25 @@
 
     // WebKit CSS3 transforms for supported devices
     @media all and (transform-3d), (-webkit-transform-3d) {
-      transition: transform .6s ease-in-out;
+      @include vp-transition(transform .6s ease-in-out);
       backface-visibility: hidden;
-      perspective: 1000px;
+      @include vp-perspective(1000px);
 
       &.next,
       &.active.right {
         left: 0;
-        transform: translate3d(100%, 0, 0);
+        @include vp-transform(translate3d(100%, 0, 0));
       }
       &.prev,
       &.active.left {
         left: 0;
-        transform: translate3d(-100%, 0, 0);
+        @include vp-transform(translate3d(-100%, 0, 0));
       }
       &.next.left,
       &.prev.right,
       &.active {
         left: 0;
-        transform: translate3d(0, 0, 0);
+        @include vp-transform(translate3d(0, 0, 0));
       }
     }
   }

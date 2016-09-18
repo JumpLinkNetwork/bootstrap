@@ -1,6 +1,6 @@
 .fade {
   opacity: 0;
-  transition: opacity .15s linear;
+  @include vp-transition(opacity .15s linear);
 
   &.in {
     opacity: 1;
@@ -21,7 +21,7 @@
   position: relative;
   height: 0;
   overflow: hidden;
-  transition-timing-function: ease;
-  transition-duration: .35s;
-  transition-property: height;
+  @include vp-transition-timing-function(ease);
+  @include vp-transition-duration(.35s);
+  @include vp-transition-property(height);
 }
