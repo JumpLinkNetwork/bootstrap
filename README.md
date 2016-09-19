@@ -10,7 +10,6 @@ Bootstrap 4 with backward compatibility for older versions of Sass like Shopify.
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.4.zip)
 - Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
 - Install with [npm](https://www.npmjs.com): `npm install bootstrap@v4-0-0-alpha-4-scss-backward`
 - Install with [Bower](http://bower.io): `bower install bootstrap#v4-0-0-alpha-4-scss-backward`
