@@ -1,5 +1,10 @@
 # [Bootstrap 4 Alpha 4 ](http://getbootstrap.com)
-Bootstrap 4 with backward compatibility for older versions of Sass
+Bootstrap 4 with backward compatibility for older versions of Sass like Shopify.
+
+
+## Changes
+* All features of Sass that can't be build with Shopify are replaced with buildable variants
+* Use of [sass-autoprefixer](https://github.com/JumpLinkNetwork/sass-autoprefixer) to get browser vendor prefixes directly in Sass without the need of recompile the css file
 
 ## Usage
 
@@ -12,7 +17,7 @@ Several quick start options are available:
 
 ## More
 
-For more Information see [original github repo of Bootstrap 4](https://github.com/twbs/bootstrap)
+For more information see [original github repo of Bootstrap 4](https://github.com/twbs/bootstrap)
 
 ## Creators
 
