@@ -10,6 +10,8 @@ Bootstrap 4 with backward compatibility for older versions of Sass like Shopify.
 
 * All features of Sass that can't be build with Shopify are replaced with buildable variants
 * Use of [sass-autoprefixer](https://github.com/JumpLinkNetwork/sass-autoprefixer) to get browser vendor prefixes directly in Sass without the need of recompile the css file
+* Added variables.json, very useful to generate theme settings for the bootstrap variables
+* Changed comment style of scss/_variables.scss to follow the annotations of Sassdoc, that makes it possible to generate the variables.json
 
 ## Usage
 
@@ -28,6 +30,11 @@ create a .scss file like theme.scss and add import sass-autoprefixer and bootstr
 ## Used in
 * [JumpLink Shopify Boilerplate](https://github.com/JumpLinkNetwork/jumplink-shopify-boilerplate)
 * [JumpLink October Boilerplate](https://github.com/JumpLinkNetwork/jumplink-october-boilerplate)
+
+## Contributing
+
+* Run `npm run diff` to show the diff between original boostrap resulting dist css and boostrap backward resulting dist css
+* Run `npm run variables` to generate variables.json
 
 
 ## More

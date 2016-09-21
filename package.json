@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "bootstrap-backward",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "version": "4.0.0-alpha.4",
   "keywords": [
@@ -24,7 +24,9 @@
     "postcss": "postcss --config grunt/postcss.js --replace dist/css/*.css",
     "postcss-docs": "postcss --config grunt/postcss.js --no-map --replace docs/assets/css/docs.min.css && postcss --config grunt/postcss.js --no-map --replace docs/examples/**/*.css",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
-    "test": "npm run eslint && npm run jscs && grunt test"
+    "test": "npm run eslint && npm run jscs && grunt test",
+    "variables": "./node_modules/sassdoc/bin/sassdoc scss/_variables.scss -p > variables.json",
+    "diff": "node diff.js"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
@@ -75,6 +77,7 @@
     "load-grunt-tasks": "^3.4.0",
     "postcss-cli": "^2.5.2",
     "postcss-flexbugs-fixes": "^2.0.0",
+    "sassdoc": "^2.1.20",
     "shelljs": "^0.7.0",
     "shx": "^0.1.2",
     "time-grunt": "^1.2.1"

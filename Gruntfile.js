@@ -408,15 +408,16 @@ module.exports = function (grunt) {
   grunt.registerTask('publish', ['buildcontrol:pages']);
 
   grunt.registerTask('diff-css', function () {
-    var done = this.async();
+    var done          = this.async();
+    var pkg           = require('./package.json');
     var colors        = require('colors');
     var jsdiff        = require('diff');
     var fs            = require('fs');
 
-    fs.readFile('./dist/css/bootstrap.css', 'utf8', function(err, backward) {
+    fs.readFile('./dist/css/'+pkg.name+'.css', 'utf8', function(err, backward) {
       if (err) throw err;
       // console.log(backward);
-      fs.readFile('./bower_components/bootstrap-4-original/dist/css/bootstrap.css', 'utf8', function(err, original) {
+      fs.readFile('./bower_components/bootstrap/dist/css/bootstrap.css', 'utf8', function(err, original) {
         if (err) throw err;
         // console.log(original);
         
