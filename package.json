@@ -11,10 +11,11 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
-  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "homepage": "https://github.com/JumpLinkNetwork/bootstrap-backward",
+  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors) and JumpLink (https://www.jumplink.eu/)",
   "contributors": [
-    "Twitter, Inc."
+    "Twitter, Inc.",
+    "JumpLink"
   ],
   "scripts": {
     "change-version": "node grunt/change-version.js",
@@ -33,10 +34,10 @@
   "main": "dist/js/bootstrap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/JumpLinkNetwork/bootstrap-backward.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/JumpLinkNetwork/bootstrap-backward/issues"
   },
   "license": "MIT",
   "dependencies": {

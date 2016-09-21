@@ -149,27 +149,35 @@ $brand-inverse:             $gray-dark !default;
 
 ///
 /// @group Options
+/// @type Bool
 $enable-flex:               false !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-rounded:            true !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-shadows:            false !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-gradients:          false !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-transitions:        false !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-hover-media-query:  false !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-grid-classes:       true !default;
 ///
 /// @group Options
+/// @type Bool
 $enable-print-styles:       true !default;
 
 // 
@@ -570,6 +578,7 @@ $btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
 
 ///
 /// @group Buttons
+/// @type Color
 $btn-primary-color:              #fff !default;
 ///
 /// @group Buttons
@@ -583,13 +592,16 @@ $btn-primary-border:             $btn-primary-bg !default;
 $btn-secondary-color:            $gray-dark !default;
 ///
 /// @group Buttons
+/// @type Color
 $btn-secondary-bg:               #fff !default;
 ///
 /// @group Buttons
+/// @type Color
 $btn-secondary-border:           #ccc !default;
 
 ///
 /// @group Buttons
+/// @type Color
 $btn-info-color:                 #fff !default;
 ///
 /// @group Buttons
@@ -600,6 +612,7 @@ $btn-info-border:                $btn-info-bg !default;
 
 ///
 /// @group Buttons
+/// @type Color
 $btn-success-color:              #fff !default;
 ///
 /// @group Buttons
@@ -610,6 +623,7 @@ $btn-success-border:             $btn-success-bg !default;
 
 ///
 /// @group Buttons
+/// @type Color
 $btn-warning-color:              #fff !default;
 ///
 /// @group Buttons
@@ -620,6 +634,7 @@ $btn-warning-border:             $btn-warning-bg !default;
 
 ///
 /// @group Buttons
+/// @type Color
 $btn-danger-color:               #fff !default;
 ///
 /// @group Buttons
@@ -680,6 +695,7 @@ $input-line-height:              1.25 !default;
 
 ///
 /// @group Forms
+/// @type Color
 $input-bg:                       #fff !default;
 ///
 /// @group Forms
@@ -713,6 +729,7 @@ $input-border-radius-sm:         $border-radius-sm !default;
 $input-bg-focus:                 $input-bg;
 ///
 /// @group Forms
+/// @type Color
 $input-border-focus:             #66afe9 !default;
 ///
 /// @group Forms
@@ -723,6 +740,7 @@ $input-color-focus:              $input-color;
 
 ///
 /// @group Forms
+/// @type Color
 $input-color-placeholder:        #999 !default;
 
 ///
@@ -782,6 +800,7 @@ $custom-control-spacer-y: .25rem !default;
 $custom-control-indicator-size:       1rem !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-control-indicator-bg:         #ddd !default;
 ///
 /// @group Forms
@@ -795,16 +814,20 @@ $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba(0,0,0,.1) !defa
 $custom-control-disabled-cursor:             $cursor-disabled !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-control-disabled-indicator-bg:       #eee !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-control-disabled-description-color:  #767676 !default;
 
 ///
 /// @group Forms
+/// @type Color
 $custom-control-checked-indicator-color:      #fff !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-control-checked-indicator-bg:         #0074d9 !default;
 ///
 /// @group Forms
@@ -816,9 +839,11 @@ $custom-control-focus-indicator-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #007
 
 ///
 /// @group Forms
+/// @type Color
 $custom-control-active-indicator-color:      #fff !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-control-active-indicator-bg:         #84c6ff !default;
 ///
 /// @group Forms
@@ -832,6 +857,7 @@ $custom-checkbox-radius: $border-radius !default;
 $custom-checkbox-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-checkbox-indeterminate-bg: #0074d9 !default;
 ///
 /// @group Forms
@@ -864,6 +890,7 @@ $custom-select-color:          $input-color !default;
 $custom-select-disabled-color: $gray-light !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-select-bg:            #fff !default;
 ///
 /// @group Forms
@@ -886,6 +913,7 @@ $custom-select-border-radius: $border-radius !default;
 
 ///
 /// @group Forms
+/// @type Color
 $custom-select-focus-border-color: #51a7e8 !default;
 ///
 /// @group Forms
@@ -919,15 +947,18 @@ $custom-file-padding-y:     1rem !default;
 $custom-file-line-height:   1.5 !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-file-color:         #555 !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-file-bg:            #fff !default;
 ///
 /// @group Forms
 $custom-file-border-width:  $border-width !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-file-border-color:  #ddd !default;
 ///
 /// @group Forms
@@ -940,6 +971,7 @@ $custom-file-box-shadow:    inset 0 .2rem .4rem rgba(0,0,0,.05) !default;
 $custom-file-button-color:  $custom-file-color !default;
 ///
 /// @group Forms
+/// @type Color
 $custom-file-button-bg:     #eee !default;
 
 ///
@@ -976,6 +1008,7 @@ $dropdown-padding-y:             5px !default;
 $dropdown-margin-top:            2px !default;
 ///
 /// @group Dropdowns
+/// @type Color
 $dropdown-bg:                    #fff !default;
 ///
 /// @group Dropdowns
@@ -985,6 +1018,7 @@ $dropdown-border-color:          rgba(0,0,0,.15) !default;
 $dropdown-border-width:          $border-width !default;
 ///
 /// @group Dropdowns
+/// @type Color
 $dropdown-divider-bg:            #e5e5e5 !default;
 ///
 /// @group Dropdowns
@@ -998,6 +1032,7 @@ $dropdown-link-color:            $gray-dark !default;
 $dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
 ///
 /// @group Dropdowns
+/// @type Color
 $dropdown-link-hover-bg:         #f5f5f5 !default;
 
 ///
@@ -1027,30 +1062,39 @@ $dropdown-header-color:          $gray-light !default;
 
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-dropdown-backdrop:  990 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-navbar:            1000 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-dropdown:          1000 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-popover:           1060 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-tooltip:           1070 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-navbar-fixed:      1030 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-navbar-sticky:     1030 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-modal-bg:          1040 !default;
 ///
 /// @group Z-index master list
+/// @type Number
 $zindex-modal:             1050 !default;
 
 
@@ -1126,6 +1170,7 @@ $nav-disabled-link-hover-bg:    transparent !default;
 
 ///
 /// @group Navs
+/// @type Color
 $nav-tabs-border-color:                       #ddd !default;
 ///
 /// @group Navs
@@ -1144,9 +1189,11 @@ $nav-tabs-active-link-hover-color:            $gray !default;
 $nav-tabs-active-link-hover-bg:               $body-bg !default;
 ///
 /// @group Navs
+/// @type Color
 $nav-tabs-active-link-hover-border-color:     #ddd !default;
 ///
 /// @group Navs
+/// @type Color
 $nav-tabs-justified-link-border-color:        #ddd !default;
 ///
 /// @group Navs
@@ -1192,12 +1239,14 @@ $pagination-padding-y-lg:             .75rem !default;
 $pagination-color:                     $link-color !default;
 ///
 /// @group Pagination
+/// @type Color
 $pagination-bg:                        #fff !default;
 ///
 /// @group Pagination
 $pagination-border-width:              $border-width !default;
 ///
 /// @group Pagination
+/// @type Color
 $pagination-border-color:              #ddd !default;
 
 ///
@@ -1208,10 +1257,12 @@ $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $gray-lighter !default;
 ///
 /// @group Pagination
+/// @type Color
 $pagination-hover-border:              #ddd !default;
 
 ///
 /// @group Pagination
+/// @type Color
 $pagination-active-color:              #fff !default;
 ///
 /// @group Pagination
@@ -1225,9 +1276,11 @@ $pagination-active-border:             $brand-primary !default;
 $pagination-disabled-color:            $gray-light !default;
 ///
 /// @group Pagination
+/// @type Color
 $pagination-disabled-bg:               #fff !default;
 ///
 /// @group Pagination
+/// @type Color
 $pagination-disabled-border:           #ddd !default;
 
 
@@ -1250,9 +1303,11 @@ $jumbotron-bg:                   $gray-lighter !default;
 
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-success-text:             #3c763d !default;
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-success-bg:               #dff0d8 !default;
 ///
 /// @group Form states and alerts
@@ -1260,9 +1315,11 @@ $state-success-border:           darken($state-success-bg, 5%) !default;
 
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-info-text:                #31708f !default;
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-info-bg:                  #d9edf7 !default;
 ///
 /// @group Form states and alerts
@@ -1270,9 +1327,11 @@ $state-info-border:              darken($state-info-bg, 7%) !default;
 
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-warning-text:             #8a6d3b !default;
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-warning-bg:               #fcf8e3 !default;
 ///
 /// @group Form states and alerts
@@ -1283,9 +1342,11 @@ $state-warning-border:           darken($state-warning-bg, 5%) !default;
 
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-danger-text:              #a94442 !default;
 ///
 /// @group Form states and alerts
+/// @type Color
 $state-danger-bg:                #f2dede !default;
 ///
 /// @group Form states and alerts
@@ -1316,13 +1377,16 @@ $card-border-color:        rgba(0,0,0,.125) !default;
 $card-border-radius-inner: $card-border-radius !default;
 ///
 /// @group Cards
+/// @type Color
 $card-cap-bg:              #f5f5f5 !default;
 ///
 /// @group Cards
+/// @type Color
 $card-bg:                  #fff !default;
 
 ///
 /// @group Cards
+/// @type Color
 $card-link-hover-color:    #fff !default;
 
 ///
@@ -1347,9 +1411,11 @@ $card-columns-sm-up-column-gap: 1.25rem !default;
 $tooltip-max-width:           200px !default;
 ///
 /// @group Tooltips
+/// @type Color
 $tooltip-color:               #fff !default;
 ///
 /// @group Tooltips
+/// @type Color
 $tooltip-bg:                  #000 !default;
 ///
 /// @group Tooltips
@@ -1381,6 +1447,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 $popover-inner-padding:               1px !default;
 ///
 /// @group Popovers
+/// @type Color
 $popover-bg:                          #fff !default;
 ///
 /// @group Popovers
@@ -1452,9 +1519,11 @@ $tag-danger-bg:             $brand-danger !default;
 
 ///
 /// @group Tags
+/// @type Color
 $tag-color:                 #fff !default;
 ///
 /// @group Tags
+/// @type Color
 $tag-link-hover-color:      #fff !default;
 ///
 /// @group Tags
@@ -1501,6 +1570,7 @@ $modal-title-line-height:     $line-height-base !default;
 
 ///
 /// @group Modals
+/// @type Color
 $modal-content-bg:               #fff !default;
 ///
 /// @group Modals
@@ -1523,6 +1593,7 @@ $modal-backdrop-bg:           #000 !default;
 $modal-backdrop-opacity:      .5 !default;
 ///
 /// @group Modals
+/// @type Color
 $modal-header-border-color:   #e5e5e5 !default;
 ///
 /// @group Modals
@@ -1593,10 +1664,12 @@ $alert-danger-border:         $state-danger-border !default;
 //
 
 ///
-/// @group Progress bars 
+/// @group Progress bars
+/// @type Color
 $progress-bg:                 #eee !default;
 ///
 /// @group Progress bars
+/// @type Color
 $progress-bar-color:          #0074d9 !default;
 ///
 /// @group Progress bars
@@ -1628,9 +1701,11 @@ $progress-bar-info-bg:        $brand-info !default;
 
 ///
 /// @group List group
+/// @type Color
 $list-group-bg:                 #fff !default;
 ///
 /// @group List group
+/// @type Color
 $list-group-border-color:       #ddd !default;
 ///
 /// @group List group
@@ -1641,6 +1716,7 @@ $list-group-border-radius:      $border-radius !default;
 
 ///
 /// @group List group
+/// @type Color
 $list-group-hover-bg:           #f5f5f5 !default;
 ///
 /// @group List group
@@ -1667,12 +1743,14 @@ $list-group-disabled-text-color: $list-group-disabled-color !default;
 
 ///
 /// @group List group
+/// @type Color
 $list-group-link-color:         #555 !default;
 ///
 /// @group List group
 $list-group-link-hover-color:   $list-group-link-color !default;
 ///
 /// @group List group
+/// @type Color
 $list-group-link-heading-color: #333 !default;
 
 ///
@@ -1701,6 +1779,7 @@ $thumbnail-bg:                $body-bg !default;
 $thumbnail-border-width:      $border-width !default;
 ///
 /// @group Image thumbnails
+/// @type Color
 $thumbnail-border-color:      #ddd !default;
 ///
 /// @group Image thumbnails
@@ -1772,6 +1851,7 @@ $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
 
 ///
 /// @group Carousel
+/// @type Color
 $carousel-control-color:                      #fff !default;
 ///
 /// @group Carousel
@@ -1798,9 +1878,11 @@ $carousel-indicator-size:                     10px !default;
 $carousel-indicator-active-size:              12px !default;
 ///
 /// @group Carousel
+/// @type Color
 $carousel-indicator-active-bg:                #fff !default;
 ///
 /// @group Carousel
+/// @type Color
 $carousel-indicator-border-color:             #fff !default;
 
 ///
@@ -1811,6 +1893,7 @@ $carousel-caption-width:                      70% !default;
 $carousel-caption-sm-up-width:                60% !default;
 ///
 /// @group Carousel
+/// @type Color
 $carousel-caption-color:                      #fff !default;
 
 ///
@@ -1827,6 +1910,7 @@ $carousel-icon-width:                         20px !default;
 $close-font-weight:           bold !default;
 ///
 /// @group Close
+/// @type Color
 $close-color:                 #000 !default;
 ///
 /// @group Close
@@ -1848,26 +1932,32 @@ $code-padding-x:              .4rem !default;
 $code-padding-y:              .2rem !default;
 ///
 /// @group Code
+/// @type Color
 $code-color:                  #bd4147 !default;
 ///
 /// @group Code
+/// @type Color
 $code-bg:                     #f7f7f9 !default;
 
 ///
 /// @group Code
+/// @type Color
 $kbd-color:                   #fff !default;
 ///
 /// @group Code
+/// @type Color
 $kbd-bg:                      #333 !default;
 
 ///
 /// @group Code
+/// @type Color
 $pre-bg:                      #f7f7f9 !default;
 ///
 /// @group Code
 $pre-color:                   $gray-dark !default;
 ///
 /// @group Code
+/// @type Color
 $pre-border-color:            #ccc !default;
 ///
 /// @group Code
