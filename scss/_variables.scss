@@ -89,91 +89,133 @@
 // Variable format should follow the `$component-modifier-state-property` order.
 
 //
-/// @group Colors
-/// @description Grayscale and brand colors for use across Bootstrap.
-/// @type Color
+// @group Colors
+// @description Grayscale and brand colors for use across Bootstrap.
+// @type Color
 //
 
 ///
+/// @group Colors
+/// @type Color
 $gray-dark:                 #373a3c !default;
 ///
+/// @group Colors
+/// @type Color
 $gray:                      #55595c !default;
 ///
+/// @group Colors
+/// @type Color
 $gray-light:                #818a91 !default;
 ///
+/// @group Colors
+/// @type Color
 $gray-lighter:              #eceeef !default;
 ///
+/// @group Colors
+/// @type Color
 $gray-lightest:             #f7f7f9 !default;
 
 ///
+/// @group Colors
+/// @type Color
 $brand-primary:             #0275d8 !default;
 ///
+/// @group Colors
+/// @type Color
 $brand-success:             #5cb85c !default;
 ///
+/// @group Colors
+/// @type Color
 $brand-info:                #5bc0de !default;
 ///
+/// @group Colors
+/// @type Color
 $brand-warning:             #f0ad4e !default;
 ///
+/// @group Colors
+/// @type Color
 $brand-danger:              #d9534f !default;
-/// @type Sass-Variable
+///
+/// @group Colors
+/// @type Text
 $brand-inverse:             $gray-dark !default;
 
 
 //
-/// @group Options
-/// @description Quickly modify global styling by enabling or disabling optional features.
+// @group Options
+// @description Quickly modify global styling by enabling or disabling optional features.
 // @type Bool
 //
 
 ///
+/// @group Options
 $enable-flex:               false !default;
 ///
+/// @group Options
 $enable-rounded:            true !default;
 ///
+/// @group Options
 $enable-shadows:            false !default;
 ///
+/// @group Options
 $enable-gradients:          false !default;
 ///
+/// @group Options
 $enable-transitions:        false !default;
 ///
+/// @group Options
 $enable-hover-media-query:  false !default;
 ///
+/// @group Options
 $enable-grid-classes:       true !default;
 ///
+/// @group Options
 $enable-print-styles:       true !default;
 
 // 
-/// @group Spacing
-/// @description
-/// Control the default styling of most Bootstrap elements by modifying these
-/// variables. Mostly focused on spacing.
-/// You can add more entries to the $spacers map, should you need more variation.
+// @group Spacing
+// @description
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
 //
 
+///
 /// @group Spacing
 $spacer:   1rem !default;
+///
 /// @group Spacing
 $spacer-x: $spacer !default;
+///
 /// @group Spacing
 $spacer-y: $spacer !default;
 
+///
 /// @group Spacing
 $spacers-x-0: 0 !default;
+///
 /// @group Spacing
 $spacers-y-0: 0 !default;
+///
 /// @group Spacing
 $spacers-x-1: $spacer-x !default;
+///
 /// @group Spacing
 $spacers-y-1: $spacer-y !default;
+///
 /// @group Spacing
 $spacers-x-2: ($spacer-x * 1.5) !default;
+///
 /// @group Spacing
 $spacers-y-2: ($spacer-y * 1.5) !default;
+///
 /// @group Spacing
 $spacers-x-3: ($spacer-x * 3) !default;
+///
 /// @group Spacing
 $spacers-y-3: ($spacer-y * 3) !default;
 
+///
 /// @group Spacing
 $border-width: 1px !default;
 
@@ -183,8 +225,10 @@ $border-width: 1px !default;
 // @description Settings for the `<body>` element.
 //
 
+///
 /// @group Body
 $body-bg:    #fff !default;
+///
 /// @group Body
 $body-color: $gray-dark !default;
 
@@ -194,12 +238,16 @@ $body-color: $gray-dark !default;
 // @description Style anchor elements.
 //
 
+///
 /// @group Links
 $link-color:            $brand-primary !default;
+///
 /// @group Links
 $link-decoration:       none !default;
+///
 /// @group Links
 $link-hover-color:      darken($link-color, 15%) !default;
+///
 /// @group Links
 $link-hover-decoration: underline !default;
 
@@ -211,14 +259,19 @@ $link-hover-decoration: underline !default;
 // adapting to different screen sizes, for use in media queries.
 //
 
+///
 /// @group Grid breakpoints
 $grid-breakpoints-xs: 0 !default;
+///
 /// @group Grid breakpoints
 $grid-breakpoints-sm: 544px !default;
+///
 /// @group Grid breakpoints
 $grid-breakpoints-md: 768px !default;
+///
 /// @group Grid breakpoints
 $grid-breakpoints-lg: 992px !default;
+///
 /// @group Grid breakpoints
 $grid-breakpoints-xl: 1200px !default;
 
@@ -230,14 +283,19 @@ $grid-breakpoints-xl: 1200px !default;
 // @description Define the maximum width of `.container` for different screen sizes.
 //
 
+///
 /// @group Grid containers
 $container-max-widths-xs: null !default;
+///
 /// @group Grid containers
 $container-max-widths-sm: 576px !default;
+///
 /// @group Grid containers
 $container-max-widths-md: 720px !default;
+///
 /// @group Grid containers
 $container-max-widths-lg: 940px !default;
+///
 /// @group Grid containers
 $container-max-widths-xl: 1140px !default;
 
@@ -249,8 +307,10 @@ $container-max-widths-xl: 1140px !default;
 // @description Set the number of columns and specify the width of the gutters.
 //
 
+///
 /// @group Grid columns
 $grid-columns:      12 !default;
+///
 /// @group Grid columns
 $grid-gutter-width: 30px !default;
 
@@ -260,12 +320,16 @@ $grid-gutter-width: 30px !default;
 // @description Font, line-height, and color for body text, headings, and more.
 //
 
+///
 /// @group Typography
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+///
 /// @group Typography
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+///
 /// @group Typography
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+///
 /// @group Typography
 $font-family-base:       $font-family-sans-serif !default;
 
@@ -995,30 +1059,42 @@ $zindex-modal:             1050 !default;
 //
 
 ///
+/// @group Navbar
 $navbar-border-radius:              $border-radius !default;
 ///
+/// @group Navbar
 $navbar-padding-x:                  $spacer !default;
 ///
+/// @group Navbar
 $navbar-padding-y:                  ($spacer / 2) !default;
 ///
+/// @group Navbar
 $navbar-brand-padding-y:            .25rem !default;
 
 ///
+/// @group Navbar
 $navbar-dark-color:                 rgba(255,255,255,.5) !default;
 ///
+/// @group Navbar
 $navbar-dark-hover-color:           rgba(255,255,255,.75) !default;
 ///
+/// @group Navbar
 $navbar-dark-active-color:          rgba(255,255,255,1) !default;
 ///
+/// @group Navbar
 $navbar-dark-disabled-color:        rgba(255,255,255,.25) !default;
 
 ///
+/// @group Navbar
 $navbar-light-color:                rgba(0,0,0,.3) !default;
 ///
+/// @group Navbar
 $navbar-light-hover-color:          rgba(0,0,0,.6) !default;
 ///
+/// @group Navbar
 $navbar-light-active-color:         rgba(0,0,0,.8) !default;
 ///
+/// @group Navbar
 $navbar-light-disabled-color:       rgba(0,0,0,.15) !default;
 
 
