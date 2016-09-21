@@ -53,12 +53,6 @@ For more information see [original github repo of Bootstrap 4](https://github.co
 - <https://twitter.com/fat>
 - <https://github.com/fat>
 
-**JumpLink ()**
-
-- <https://twitter.com/fat>
-- <https://github.com/fat>
-
-
 ## Copyright and license
 
 Code and documentation copyright 2011-2016 the Bootstrap Authors and Twitter, Inc. Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
