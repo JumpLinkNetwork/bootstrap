@@ -26,7 +26,7 @@
     "postcss-docs": "postcss --config grunt/postcss.js --no-map --replace docs/assets/css/docs.min.css && postcss --config grunt/postcss.js --no-map --replace docs/examples/**/*.css",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
     "test": "npm run eslint && npm run jscs && grunt test",
-    "variables": "./node_modules/sassdoc/bin/sassdoc scss/_variables.scss -p > variables.json",
+    "variables": "./node_modules/sassdoc/bin/sassdoc scss/_variables.scss -p > variables.json && node sortVariables.js",
     "diff": "node diff.js"
   },
   "style": "dist/css/bootstrap.css",
