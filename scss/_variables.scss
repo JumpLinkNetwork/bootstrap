@@ -200,9 +200,11 @@ $spacer-y: $spacer !default;
 
 ///
 /// @group Spacing
+/// @type Number
 $spacers-x-0: 0 !default;
 ///
 /// @group Spacing
+/// @type Number
 $spacers-y-0: 0 !default;
 ///
 /// @group Spacing
@@ -269,6 +271,7 @@ $link-hover-decoration: underline !default;
 
 ///
 /// @group Grid breakpoints
+/// @type Number
 $grid-breakpoints-xs: 0 !default;
 ///
 /// @group Grid breakpoints
