@@ -51,6 +51,9 @@
           @include make-col(7, $grid-columns);
         }
         @if $i == 8 {
+          @include make-col(8, $grid-columns);
+        }
+        @if $i == 9 {
           @include make-col(9, $grid-columns);
         }
         @if $i == 10 {
