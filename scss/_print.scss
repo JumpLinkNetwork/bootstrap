@@ -26,7 +26,7 @@
                                 //   http://www.sanbeiji.com/archives/953
       text-shadow: none !important;
       //background: transparent !important;
-      box-shadow: none !important;
+      @include vp-box-shadow(none !important);
     }
 
     a,

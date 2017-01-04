@@ -17,7 +17,7 @@
   @include if-supports-3d-transforms() {
     @include transition($carousel-transition);
     backface-visibility: hidden;
-    perspective: 1000px;
+    @include vp-perspective(1000px);
   }
 }
 
@@ -37,17 +37,17 @@
 @include if-supports-3d-transforms() {
   .carousel-item-next.carousel-item-left,
   .carousel-item-prev.carousel-item-right {
-    transform: translate3d(0, 0, 0);
+    @include vp-transform(translate3d(0, 0, 0));
   }
 
   .carousel-item-next,
   .active.carousel-item-right {
-    transform: translate3d(100%, 0, 0);
+    @include vp-transform(translate3d(100%, 0, 0));
   }
 
   .carousel-item-prev,
   .active.carousel-item-left {
-    transform: translate3d(-100%, 0, 0);
+    @include vp-transform(translate3d(-100%, 0, 0));
   }
 }
 
@@ -94,7 +94,7 @@
   width: $carousel-control-icon-width;
   height: $carousel-control-icon-width;
   background: transparent no-repeat center center;
-  background-size: 100% 100%;
+  @include vp-background-size(100% 100%);
 }
 .carousel-control-prev-icon {
   background-image: $carousel-control-prev-icon-bg;

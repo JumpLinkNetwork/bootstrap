@@ -26,6 +26,6 @@ button.close {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
+  @include vp-appearance(none);
 }
 // scss-lint:enable QualifyingElement

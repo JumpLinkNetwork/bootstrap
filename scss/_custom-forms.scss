@@ -30,8 +30,8 @@
   }
 
   &:focus ~ .custom-control-indicator {
-    // the mixin is not used here to make sure there is feedback
-    box-shadow: $custom-control-focus-indicator-box-shadow;
+    // the bootstrap  mixin is not used here to make sure there is feedback
+    @include vp-box-shadow($custom-control-focus-indicator-box-shadow);
   }
 
   &:active ~ .custom-control-indicator {
@@ -65,11 +65,11 @@
   width: $custom-control-indicator-size;
   height: $custom-control-indicator-size;
   pointer-events: none;
-  user-select: none;
+  @include vp-user-select(none);
   background-color: $custom-control-indicator-bg;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: $custom-control-indicator-bg-size;
+  @include vp-background-size($custom-control-indicator-bg-size);
   @include box-shadow($custom-control-indicator-box-shadow);
 }
 
@@ -143,12 +143,11 @@
   color: $custom-select-color;
   vertical-align: middle;
   background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
-  background-size: $custom-select-bg-size;
+  @include vp-background-size($custom-select-bg-size);
   border: $custom-select-border-width solid $custom-select-border-color;
   @include border-radius($custom-select-border-radius);
   // Use vendor prefixes as `appearance` isn't part of the CSS spec.
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  @include vp-appearance(none);
 
   &:focus {
     border-color: $custom-select-focus-border-color;
@@ -225,16 +224,23 @@
   padding: $custom-file-padding-x $custom-file-padding-y;
   line-height: $custom-file-line-height;
   color: $custom-file-color;
-  user-select: none;
+  @include vp-user-select(none);
   background-color: $custom-file-bg;
   border: $custom-file-border-width solid $custom-file-border-color;
   @include border-radius($custom-file-border-radius);
   @include box-shadow($custom-file-box-shadow);
 
-  @each $lang, $text in map-get($custom-file-text, placeholder) {
-    &:lang(#{$lang})::after {
-      content: $text;
-    }
+
+  $lang: en;
+  $text: $custom-file-text-placeholder-en;
+  &:lang(#{$lang})::after {
+    content: $text;
+  }
+
+  $lang: de;
+  $text: $custom-file-text-placeholder-de;
+  &:lang(#{$lang})::after {
+    content: $text;
   }
 
   &::before {
@@ -253,9 +259,16 @@
     @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
   }
 
-  @each $lang, $text in map-get($custom-file-text, button-label) {
-    &:lang(#{$lang})::before {
-      content: $text;
-    }
+  $lang: en;
+  $text: $custom-file-text-button-label-en;
+  &:lang(#{$lang})::after {
+    content: $text;
   }
+
+  $lang: de;
+  $text: $custom-file-text-button-label-de;
+  &:lang(#{$lang})::before {
+    content: $text;
+  }
+
 }

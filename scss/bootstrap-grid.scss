@@ -12,14 +12,14 @@
 }
 
 html {
-  box-sizing: border-box;
+  @include vp-box-sizing(border-box);
   -ms-overflow-style: scrollbar;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  @include vp-box-sizing(inherit);
 }
 
 

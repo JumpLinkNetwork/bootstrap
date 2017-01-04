@@ -20,13 +20,13 @@
 // Credit: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 html {
-  box-sizing: border-box;
+  @include vp-box-sizing(border-box);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  @include vp-box-sizing(inherit);
 }
 
 
@@ -257,7 +257,7 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation;
+  @include vp-touch-action(manipulation);
 }
 
 
@@ -334,7 +334,7 @@ input[type="month"] {
   // centered within the input.
   // See https://bugs.webkit.org/show_bug.cgi?id=139848
   // and https://github.com/twbs/bootstrap/issues/11266
-  -webkit-appearance: listbox;
+  @include vp-appearance(listbox);
 }
 
 textarea {
@@ -370,7 +370,7 @@ input[type="search"] {
   // `.form-control` class can properly style them. Note that this cannot simply
   // be added to `.form-control` as it's not specific enough. For details, see
   // https://github.com/twbs/bootstrap/issues/11586.
-  -webkit-appearance: none;
+  @include vp-appearance(none);
 }
 
 // todo: needed?

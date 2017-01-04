@@ -1,5 +1,5 @@
 // Progress animations
-@keyframes progress-bar-stripes {
+@include vp-keyframes(progress-bar-stripes) {
   from { background-position: $progress-height 0; }
   to { background-position: 0 0; }
 }
@@ -23,10 +23,10 @@
 // Striped
 .progress-bar-striped {
   @include gradient-striped();
-  background-size: $progress-height $progress-height;
+  @include vp-background-size($progress-height $progress-height);
 }
 
 // Animated
 .progress-bar-animated {
-  animation: progress-bar-stripes $progress-bar-animation-timing;
+  @include vp-animation(progress-bar-stripes $progress-bar-animation-timing);
 }
