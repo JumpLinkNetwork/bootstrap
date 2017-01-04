@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "bootstrap-backward",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "version": "4.0.0-alpha.5",
   "keywords": [
@@ -11,10 +11,11 @@
     "framework",
     "web"
   ],
-  "homepage": "https://getbootstrap.com",
-  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "homepage": "https://github.com/JumpLinkNetwork/bootstrap-backward",
+  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors) and JumpLink (https://www.jumplink.eu/)",
   "contributors": [
-    "Twitter, Inc."
+    "Twitter, Inc.",
+    "JumpLink"
   ],
   "scripts": {
     "change-version": "node grunt/change-version.js",
@@ -29,22 +30,24 @@
     "uglify": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output dist/js/bootstrap.min.js dist/js/bootstrap.js",
     "uglify-docs": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output docs/assets/js/docs.min.js docs/assets/js/vendor/*.js docs/assets/js/src/application.js",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
-    "test": "npm run eslint && grunt test"
+    "test": "npm run eslint && grunt test",
+    "variables": "./node_modules/sassdoc/bin/sassdoc scss/_variables.scss -p > variables.json && node sortVariables.js"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
   "main": "dist/js/bootstrap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/JumpLinkNetwork/bootstrap-backward.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/JumpLinkNetwork/bootstrap-backward/issues"
   },
   "license": "MIT",
   "dependencies": {
     "jquery": ">=1.9.1",
-    "tether": "^1.3.7"
+    "tether": "^1.3.7",
+    "sass-autoprefixer": "JumpLinkNetwork/sass-autoprefixer"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
