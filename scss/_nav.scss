@@ -4,14 +4,14 @@
 // `<nav>`s or `<ul>`s.
 
 .nav {
-  display: flex;
+  @include vp-display(flex);
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
 .nav-link {
-  display: block;
+  @include vp-display(block);
   padding: $nav-link-padding;
 
   @include hover-focus {
@@ -92,14 +92,14 @@
 
 .nav-fill {
   .nav-item {
-    flex: 1 1 auto;
+    @include vp-flex(1 1 auto);
     text-align: center;
   }
 }
 
 .nav-justified {
   .nav-item {
-    flex: 1 1 100%;
+    @include vp-flex(1 1 100%);
     text-align: center;
   }
 }

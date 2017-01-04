@@ -1,9 +1,34 @@
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+$infix: xs;
+@include media-breakpoint-up($infix) {
+  .float-#{$infix}-left  { @include float-left; }
+  .float-#{$infix}-right { @include float-right; }
+  .float-#{$infix}-none  { @include float-none; }
+}
 
-    .float#{$infix}-left  { @include float-left; }
-    .float#{$infix}-right { @include float-right; }
-    .float#{$infix}-none  { @include float-none; }
-  }
+$infix: sm;
+@include media-breakpoint-up($infix) {
+  .float-#{$infix}-left  { @include float-left; }
+  .float-#{$infix}-right { @include float-right; }
+  .float-#{$infix}-none  { @include float-none; }
+}
+
+$infix: md;
+@include media-breakpoint-up($infix) {
+  .float-#{$infix}-left  { @include float-left; }
+  .float-#{$infix}-right { @include float-right; }
+  .float-#{$infix}-none  { @include float-none; }
+}
+
+$infix: lg;
+@include media-breakpoint-up($infix) {
+  .float-#{$infix}-left  { @include float-left; }
+  .float-#{$infix}-right { @include float-right; }
+  .float-#{$infix}-none  { @include float-none; }
+}
+
+$infix: xl;
+@include media-breakpoint-up($infix) {
+  .float-#{$infix}-left  { @include float-left; }
+  .float-#{$infix}-right { @include float-right; }
+  .float-#{$infix}-none  { @include float-none; }
 }

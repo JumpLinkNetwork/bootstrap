@@ -4,8 +4,8 @@
 
 .card {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  @include vp-display(flex);
+  @include vp-flex-direction(column);
   background-color: $card-bg;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
@@ -14,7 +14,7 @@
 .card-block {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
-  flex: 1 1 auto;
+  @include vp-flex(1 1 auto);
   padding: $card-spacer-x;
 }
 
@@ -186,13 +186,13 @@
 
 @include media-breakpoint-up(sm) {
   .card-deck {
-    display: flex;
-    flex-flow: row wrap;
+    @include vp-display(flex);
+    @include vp-flex-flow(row wrap);
 
     .card {
-      display: flex;
-      flex: 1 0 0;
-      flex-direction: column;
+      @include vp-display(flex);
+      @include vp-flex(1 0 0%);
+      @include vp-flex-direction(column);
 
       // Selectively apply horizontal margins to cards to avoid doing the
       // negative margin dance like our grid. This differs from the grid
@@ -210,11 +210,11 @@
 
 @include media-breakpoint-up(sm) {
   .card-group {
-    display: flex;
-    flex-flow: row wrap;
+    @include vp-display(flex);
+    @include vp-flex-flow(row wrap);
 
     .card {
-      flex: 1 0 0;
+      @include vp-flex(1 0 0%);
 
       + .card {
         margin-left: 0;

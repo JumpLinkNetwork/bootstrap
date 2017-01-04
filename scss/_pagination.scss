@@ -1,5 +1,5 @@
 .pagination {
-  display: flex;
+  @include vp-display(flex);
   // 1-2: Disable browser default list styles
   padding-left: 0; // 1
   list-style: none; // 2

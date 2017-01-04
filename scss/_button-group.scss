@@ -4,12 +4,12 @@
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  display: flex;
+  @include vp-display(flex);
   vertical-align: middle; // match .btn alignment given font-size hack above
 
   > .btn {
     position: relative;
-    flex: 0 1 auto;
+    @include vp-flex(0 1 auto);
 
     // Bring the hover, focused, and "active" buttons to the fron to overlay
     // the borders properly
@@ -34,8 +34,8 @@
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-  display: flex;
-  justify-content: flex-start;
+  @include vp-display(flex);
+  @include vp-justify-content(flex-start);
 
   .input-group {
     width: auto;
@@ -149,10 +149,10 @@
 //
 
 .btn-group-vertical {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  @include vp-display(inline-flex);
+  @include vp-flex-direction(column);
+  @include vp-align-items(flex-start);
+  @include vp-align-content(center);
 
   .btn,
   .btn-group {

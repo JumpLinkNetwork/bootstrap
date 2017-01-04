@@ -10,15 +10,46 @@
 
 // Responsive alignment
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    .text#{$infix}-left   { text-align: left !important; }
-    .text#{$infix}-right  { text-align: right !important; }
-    .text#{$infix}-center { text-align: center !important; }
-  }
+$breakpoint: xs;
+$infix: null;
+@include media-breakpoint-up($breakpoint) {
+  .text#{$infix}-left   { text-align: left !important; }
+  .text#{$infix}-right  { text-align: right !important; }
+  .text#{$infix}-center { text-align: center !important; }
 }
+
+$breakpoint: sm;
+$infix: '-sm';
+@include media-breakpoint-up($breakpoint) {
+  .text#{$infix}-left   { text-align: left !important; }
+  .text#{$infix}-right  { text-align: right !important; }
+  .text#{$infix}-center { text-align: center !important; }
+}
+
+$breakpoint: md;
+$infix: '-md';
+@include media-breakpoint-up($breakpoint) {
+  .text#{$infix}-left   { text-align: left !important; }
+  .text#{$infix}-right  { text-align: right !important; }
+  .text#{$infix}-center { text-align: center !important; }
+}
+
+$breakpoint: lg;
+$infix: '-lg';
+@include media-breakpoint-up($breakpoint) {
+  .text#{$infix}-left   { text-align: left !important; }
+  .text#{$infix}-right  { text-align: right !important; }
+  .text#{$infix}-center { text-align: center !important; }
+}
+
+$breakpoint: xl;
+$infix: '-xl';
+@include media-breakpoint-up($breakpoint) {
+  .text#{$infix}-left   { text-align: left !important; }
+  .text#{$infix}-right  { text-align: right !important; }
+  .text#{$infix}-center { text-align: center !important; }
+}
+
 
 // Transformation
 

@@ -48,8 +48,8 @@
 // Actual modal
 .modal-content {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  @include vp-display(flex);
+  @include vp-flex-direction(column);
   background-color: $modal-content-bg;
   @include vp-background-clip(padding-box);
   border: $modal-content-border-width solid $modal-content-border-color;
@@ -77,9 +77,9 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  display: flex;
-  align-items: center; // vertically center it
-  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  @include vp-display(flex);
+  @include vp-align-items(center); // vertically center it
+  @include vp-justify-content(space-between); // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
 }
@@ -96,15 +96,15 @@
   position: relative;
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
-  flex: 1 1 auto;
+  @include vp-flex(1 1 auto);
   padding: $modal-inner-padding;
 }
 
 // Footer (for actions)
 .modal-footer {
-  display: flex;
-  align-items: center; // vertically center
-  justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
+  @include vp-display(flex);
+  @include vp-align-items(center); // vertically center
+  @include vp-justify-content(flex-end); // Right align buttons with flex property because text-align doesn't work on flex items
   padding: $modal-inner-padding;
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
 

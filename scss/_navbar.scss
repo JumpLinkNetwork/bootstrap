@@ -17,8 +17,8 @@
 
 .navbar {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  @include vp-display(flex);
+  @include vp-flex-direction(column);
   padding: $navbar-padding-y $navbar-padding-x;
 }
 
@@ -47,8 +47,8 @@
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
-  display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  @include vp-display(flex);
+  @include vp-flex-direction(column); // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -78,7 +78,7 @@
 
 // Button for toggling the navbar when in it's collapsed state
 .navbar-toggler {
-  align-self: flex-start; // Prevent toggler from growing to full width when it's the only visible navbar child
+  @include vp-align-self(flex-start); // Prevent toggler from growing to full width when it's the only visible navbar child
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   font-size: $navbar-toggler-font-size;
   line-height: 1;
@@ -131,12 +131,12 @@
 }
 
 @mixin navbar-toggleable-infix-media-breakpoint-up() {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  @include vp-flex-direction(row);
+  @include vp-flex-wrap(nowrap);
+  @include vp-align-items(center);
 
   .navbar-nav {
-    flex-direction: row;
+    @include vp-flex-direction(row);
 
     .nav-link {
       padding-right: .5rem;
@@ -146,14 +146,14 @@
 
   // For nesting containers, have to redeclare for alignment purposes
   > .container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    @include vp-display(flex);
+    @include vp-flex-wrap(nowrap);
+    @include vp-align-items(center);
   }
 
   // scss-lint:disable ImportantRule
   .navbar-collapse {
-    display: flex !important;
+    @include vp-display(flex !important);
     width: 100%;
   }
   // scss-lint:enable ImportantRule

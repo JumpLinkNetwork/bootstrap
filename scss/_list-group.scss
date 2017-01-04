@@ -3,8 +3,8 @@
 // Easily usable on <ul>, <ol>, or <div>.
 
 .list-group {
-  display: flex;
-  flex-direction: column;
+  @include vp-display(flex);
+  @include vp-flex-direction(column);
 
   // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
@@ -46,9 +46,9 @@
 
 .list-group-item {
   position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  @include vp-display(flex);
+  @include vp-flex-flow(row wrap);
+  @include vp-align-items(center);
   padding: $list-group-item-padding-y $list-group-item-padding-x;
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -$list-group-border-width;

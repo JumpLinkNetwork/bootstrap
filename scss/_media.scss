@@ -1,8 +1,8 @@
 .media {
-  display: flex;
-  align-items: flex-start;
+  @include vp-display(flex);
+  @include vp-align-items(flex-start);
 }
 
 .media-body {
-  flex: 1;
+  @include vp-flex(1);
 }
