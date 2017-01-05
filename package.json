@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-backward",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "description": "Backward compatibility for older scss versions or other scss implementations for Twitter Bootstrap 4 Alpha 5.",
   "version": "4.0.0-alpha.5",
   "keywords": [
     "css",
@@ -47,7 +47,7 @@
   "dependencies": {
     "jquery": ">=1.9.1",
     "tether": "^1.3.7",
-    "sass-autoprefixer": "JumpLinkNetwork/sass-autoprefixer"
+    "sass-autoprefixer": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
