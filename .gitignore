@@ -48,5 +48,10 @@ scss-lint-report.xml
 docs/.jekyll-metadata
 
 # Folders to ignore
-bower_components
-node_modules
+bower_components/
+node_modules/
+vendor/
+
+#custom
+composer.phar
+composer.lock

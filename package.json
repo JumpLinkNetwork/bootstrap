@@ -32,7 +32,8 @@
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
     "test": "npm run eslint && grunt test",
     "variables": "./node_modules/sassdoc/bin/sassdoc scss/_variables.scss -p > variables.json && node sortVariables.js",
-    "diff": "node diff.js"
+    "diff": "node diff.js",
+    "scssphp": "php ./vendor/bin/pscss ./scss/bootstrap-backward.scss"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",

@@ -1,5 +1,5 @@
 {
-  "name": "twbs/bootstrap",
+  "name": "JumpLinkNetwork/bootstrap-backward",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "keywords": [
     "css",
@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "homepage": "https://getbootstrap.com",
+  "homepage": "https://github.com/JumpLinkNetwork/bootstrap-backward",
   "authors": [
     {
       "name": "Mark Otto",
@@ -23,15 +23,18 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/JumpLinkNetwork/bootstrap-backward/issues"
   },
   "license": "MIT",
   "extra": {
     "branch-alias": {
-      "dev-master": "3.3.x-dev"
+      "dev-master": "4.x.x-dev"
     }
   },
   "replace": {
-    "twitter/bootstrap": "self.version"
+    "twitter/bootstrap-backward": "self.version"
+  },
+  "require": {
+    "leafo/scssphp": "0.6.6"
   }
 }
