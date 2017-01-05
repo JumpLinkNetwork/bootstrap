@@ -44,7 +44,7 @@ html {
 // See https://getbootstrap.com/getting-started/#support-ie10-width for the relevant hack.
 //
 // Wrap `@viewport` with `@at-root` for when folks do a nested import (e.g.,
-// `.class-name { @import "bootstrap"; }`).
+// `.class-name { [at]import "bootstrap"; }`).
 @at-root {
   @-ms-viewport { width: device-width; }
 }
