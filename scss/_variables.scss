@@ -1485,7 +1485,6 @@ $pagination-line-height:              1.25 !default;
 $pagination-color:                     $link-color !default;
 ///
 /// @group Pagination
-/// @type Color
 $pagination-bg:                        $white !default;
 ///
 /// @group Pagination
@@ -1508,7 +1507,7 @@ $pagination-hover-border:              #ddd !default;
 
 ///
 /// @group Pagination
-/// @type Color
+/// @type Text
 $pagination-active-color:              $white !default;
 ///
 /// @group Pagination
@@ -1522,7 +1521,7 @@ $pagination-active-border:             $brand-primary !default;
 $pagination-disabled-color:            $gray-light !default;
 ///
 /// @group Pagination
-/// @type Color
+/// @type Text
 $pagination-disabled-bg:               $white !default;
 ///
 /// @group Pagination
@@ -1623,16 +1622,16 @@ $card-border-color:        rgba($black,.125) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 ///
 /// @group Cards
-/// @type Color
+/// @type Text
 $card-cap-bg:              $gray-lightest !default;
 ///
 /// @group Cards
-/// @type Color
+/// @type Text
 $card-bg:                  $white !default;
 
 ///
 /// @group Cards
-/// @type Color
+/// @type Text
 $card-link-hover-color:    $white !default;
 
 ///
@@ -1667,11 +1666,11 @@ $card-columns-margin:       $card-spacer-y !default;
 $tooltip-max-width:           200px !default;
 ///
 /// @group Tooltips
-/// @type Color
+/// @type Text
 $tooltip-color:               $white !default;
 ///
 /// @group Tooltips
-/// @type Color
+/// @type Text
 $tooltip-bg:                  $black !default;
 ///
 /// @group Tooltips
@@ -1703,7 +1702,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 $popover-inner-padding:               1px !default;
 ///
 /// @group Popovers
-/// @type Color
+/// @type Text
 $popover-bg:                          $white !default;
 ///
 /// @group Popovers
@@ -1775,11 +1774,11 @@ $badge-danger-bg:             $brand-danger !default;
 
 ///
 /// @group Badges
-/// @type Color
+/// @type Text
 $badge-color:                 $white !default;
 ///
 /// @group Badges
-/// @type Color
+/// @type Text
 $badge-link-hover-color:      $white !default;
 ///
 /// @group Badges
@@ -2209,21 +2208,21 @@ $code-padding-y:              .2rem !default;
 $code-color:                  #bd4147 !default;
 ///
 /// @group Code
-/// @type Color
+/// @type Text
 $code-bg:                     $gray-lightest !default;
 
 ///
 /// @group Code
-/// @type Color
+/// @type Text
 $kbd-color:                   $white !default;
 ///
 /// @group Code
-/// @type Color
+/// @type Text
 $kbd-bg:                      $gray-dark !default;
 
 ///
 /// @group Code
-/// @type Color
+/// @type Text
 $pre-bg:                      $gray-lightest !default;
 ///
 /// @group Code
