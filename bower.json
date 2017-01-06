@@ -1,5 +1,6 @@
 {
   "name": "bootstrap-backward",
+  "version": "v4.0.0-alpha.5",
   "description": "Backward compatibility for older scss versions or other scss implementations for Twitter Bootstrap 4 Alpha 5.",
   "keywords": [
     "css",
