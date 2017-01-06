@@ -17,8 +17,8 @@ Bootstrap 4 with backward compatibility for older versions of Sass like Shopify.
 
 Several quick start options are available:
 - Clone the repo: `git clone https://github.com/JumpLinkNetwork/bootstrap-backward.git`
-- Install with [npm](https://www.npmjs.com): `npm install bootstrap-backward@v4-0-0-alpha-5-scss-backward`
-- Install with [Bower](http://bower.io): `bower install bootstrap-backward#v4-0-0-alpha-5-scss-backward`
+- Install with [npm](https://www.npmjs.com): `npm install bootstrap-backward`
+- Install with [Bower](http://bower.io): `bower install bootstrap-backward`
 
 create a .scss file like theme.scss and add import sass-autoprefixer and bootstrap-backward:
 
