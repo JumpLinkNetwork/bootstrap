@@ -378,7 +378,7 @@
   $infix: '-sm';
   @include make-grid-column($breakpoint, $infix, $columns, $xs, $sm, $md, $lg, $xl);
 
-  $breakpoint: sm;
+  $breakpoint: md;
   $infix: '-md';
   @include make-grid-column($breakpoint, $infix, $columns, $xs, $sm, $md, $lg, $xl);
 
