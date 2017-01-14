@@ -370,8 +370,8 @@
     @include make-gutters($gutter-xs, $gutter-sm, $gutter-md, $gutter-lg, $gutter-xl);
   }
 
-  $breakpoint: xs;
-  $infix: null;
+  $breakpoint: null;
+  $infix: '-xs';
   @include make-grid-column($breakpoint, $infix, $columns, $xs, $sm, $md, $lg, $xl);
 
   $breakpoint: sm;
