@@ -3,7 +3,7 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
-@mixin make-grid-column($breakpoint, $infix, $columns: $grid-columns, $gutter: $grid-gutter-width, $xs: $grid-breakpoints-xs, $sm: $grid-breakpoints-sm, $md: $grid-breakpoints-md, $lg: $grid-breakpoints-lg, $xl: $grid-breakpoints-xl) {
+@mixin make-grid-column($breakpoint, $infix, $columns: $grid-columns, $xs: $grid-breakpoints-xs, $sm: $grid-breakpoints-sm, $md: $grid-breakpoints-md, $lg: $grid-breakpoints-lg, $xl: $grid-breakpoints-xl) {
 
   @for $i from 1 through $columns {
     .col#{$infix}-#{$i} {
