@@ -32,6 +32,6 @@
   "dependencies": {
     "jquery": "1.9.1 - 3",
     "tether": "^1.3.7",
-    "sass-autoprefixer": "^1.0.1"
+    "ssass-prefix-mixins": "JumpLinkNetwork/sass-prefix-mixins#master"
   }
 }
